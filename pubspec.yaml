@@ -23,14 +23,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  fake_push: ^0.5.4 #信鸽推送
   fish_redux: ^0.3.4 # 闲鱼框架
   dio: ^3.0.9 #网络请求
   fluttertoast: ^7.0.2 #弹窗
   flutter_screenutil: ^2.3.0 #屏幕适应
   shared_preferences: ^0.4.3
-  xg_flutter_plugin:
-    path: ../XG-Flutter-Plugin
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

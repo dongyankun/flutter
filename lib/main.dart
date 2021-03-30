@@ -5,7 +5,7 @@ import 'package:flutterdemo/home_page/page.dart';
 import 'package:flutterdemo/index_page/page.dart';
 import 'package:flutterdemo/user_store/state.dart';
 import 'package:flutterdemo/user_store/store.dart';
-import 'package:xg_flutter_plugin/xg_flutter_plugin.dart';
+import 'dart:math' as math;
 
 void main() => runApp(createApp());
 Widget createApp() {
@@ -99,50 +99,11 @@ Widget createApp() {
 void initState() {
   //super.initState();
   // 这里初始化腾讯信鸽服务
-  initXgPushState();
-}
-
-// 初始化腾讯信鸽推送
-Future<void> initXgPushState() async {
-  String xgSdkVersion;
-  try {
-    // 【BUG1】这里在安卓端是有一个bug，获取不到version。后面会说到
-    xgSdkVersion = await XgFlutterPlugin.xgSdkVersion;
-  } catch (e) {
-    print("push error:" + e.toString());
+  void main() {
+    int num = 111;
+    int data = math.max(1, 1);
+    println(data);
   }
 
-  // 调试模式，默认为false
-  XgFlutterPlugin().setEnableDebug(false);
-
-  // 注册推送服务
-  XgFlutterPlugin.xgApi.regPush();
-
-  // 【BUG2】获取信鸽推送的token。这里在安卓端也是有一个bug。后面会说到
-  String xgToken = await XgFlutterPlugin.xgToken;
-
-  XgFlutterPlugin().addEventHandler(
-      onRegisteredDeviceToken: (String msg) async {
-    // 获取设备token回调（在注册成功里面获取的）
-  }, onRegisteredDone: (String msg) async {
-    // 注册成功回调
-  }, unRegistered: (String msg) async {
-    // 反注册回调
-  }, onReceiveNotificationResponse: (Map<String, dynamic> msg) async {
-    // 收到通知回调
-  }, onReceiveMessage: (Map<String, dynamic> msg) async {
-    // 收到透传通知回调
-  }, xgPushDidSetBadge: (String msg) async {
-    // 设置角标回调，仅仅IOS可用（这边我们只在安卓端使用），这个可以不要
-  }, xgPushDidBindWithIdentifier: (String msg) async {
-    // 绑定账号跟标签回调
-  }, xgPushDidUnbindWithIdentifier: (String msg) async {
-    // 解绑账号跟标签回调
-  }, xgPushDidUpdatedBindedIdentifier: (String msg) async {
-    // 更新账号跟标签回调
-  }, xgPushDidClearAllIdentifiers: (String msg) async {
-    // 清除账号跟标签回调
-  }, xgPushClickAction: (Map<String, dynamic> msg) async {
-    // 通知点击事件回调
-  });
+  main();
 }
