@@ -8,5 +8,4 @@ Effect<IndexState> buildEffect() {
   });
 }
 
-void _onAction(Action action, Context<IndexState> ctx) {
-}
+void _onAction(Action action, Context<IndexState> ctx) {}

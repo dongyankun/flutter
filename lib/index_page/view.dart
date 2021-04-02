@@ -30,7 +30,6 @@ Widget buildView(IndexState state, Dispatch dispatch, ViewService viewService) {
             color: Colors.blue,
             child: Text('登录'),
             onPressed: () {
-              println('1123123213');
               UserStore.store
                   .dispatch(UserStateActionCreator.onchangeName('123121321'));
               // dispatch(UserStateActionCreator.)

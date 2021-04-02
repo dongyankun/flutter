@@ -8,15 +8,12 @@ import 'view.dart';
 class IndexPage extends Page<IndexState, Map<String, dynamic>> {
   IndexPage()
       : super(
-            initState: initState,
-            effect: buildEffect(),
-            reducer: buildReducer(),
-            view: buildView,
-            dependencies: Dependencies<IndexState>(
-                adapter: null,
-                slots: <String, Dependent<IndexState>>{
-                }),
-            middleware: <Middleware<IndexState>>[
-            ],);
-
+          initState: initState,
+          effect: buildEffect(),
+          reducer: buildReducer(),
+          view: buildView,
+          dependencies: Dependencies<IndexState>(
+              adapter: null, slots: <String, Dependent<IndexState>>{}),
+          middleware: <Middleware<IndexState>>[],
+        );
 }
