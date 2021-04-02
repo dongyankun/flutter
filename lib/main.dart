@@ -99,10 +99,33 @@ Widget createApp() {
 void initState() {
   //super.initState();
   // 这里初始化腾讯信鸽服务
+
   void main() {
-    int num = 111;
-    int data = math.max(1, 1);
-    println(data);
+    // int num = 111;
+    // int data = math.max(1, 1);
+    // println(data);
+    //字符串转数字
+    // var num = double.parse("1.1");
+    // println(num == 1);
+    // 字符串拼接
+    // var nihao = '12312';
+    // var string = 'ddsads${nihao}addsasd';
+    // println(string);
+    // 检查类型
+    // String name = "12313";
+    // println(name.isEmpty);
+    // List<int> list = [1, 2, 3];
+    // list.add('sss');
+    // println(list);
+
+    // 数组反转
+    // List<dynamic> list = [1, 2, 3];
+    // list.add('2s');
+    // var list2 = list.reversed;
+    // println(list);
+    // println(list2);
+    List<dynamic> list = [1, 2, 3, 4];
+    // list.asMap()
   }
 
   main();
