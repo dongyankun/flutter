@@ -121,11 +121,38 @@ void initState() {
     // 数组反转
     // List<dynamic> list = [1, 2, 3];
     // list.add('2s');
+    //
     // var list2 = list.reversed;
     // println(list);
     // println(list2);
-    List<dynamic> list = [1, 2, 3, 4];
-    // list.asMap()
+    // List<dynamic> list = [1, 2, 3, 4];
+    // list.add(1);
+    // list.addAll([00, 99, 3123]);
+    // println(list);
+    //
+    // 方法
+    // bool nihao() {
+    //   return true;
+    // }
+    // bool nihao() => true;
+    // 具名
+    // void nihao({bool x, String name}) {
+    //   println(x);
+    //   println(name);
+    // }
+    // 非具名
+    // nihao(name: '123', x: true);
+    // void nihao(bool name) {
+    //   println(name);
+    // }
+    // nihao(true);
+
+    // String getName(String name, [String x = '123']) {
+    //   println(name);
+    //   println(x);
+    // }
+
+    // getName('213');
   }
 
   main();
