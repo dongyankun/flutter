@@ -104,7 +104,7 @@ void initState() {
     // int num = 111;
     // int data = math.max(1, 1);
     // println(data);
-    //字符串转数字
+    // 字符串转数字
     // var num = double.parse("1.1");
     // println(num == 1);
     // 字符串拼接
@@ -117,7 +117,6 @@ void initState() {
     // List<int> list = [1, 2, 3];
     // list.add('sss');
     // println(list);
-
     // 数组反转
     // List<dynamic> list = [1, 2, 3];
     // list.add('2s');
@@ -146,14 +145,43 @@ void initState() {
     //   println(name);
     // }
     // nihao(true);
-
     // String getName(String name, [String x = '123']) {
     //   println(name);
     //   println(x);
     // }
-
     // getName('213');
+    //foreach循环
+    // List list = [1, 2, 3];
+    // list.forEach((item) {
+    //   println(item);
+    // });
+    //除取整
+    // var a = 1;
+    // var b = 2;
+    // println(a ~/ b);
+    // 运算符
+    // var a = 2;
+    // var b;
+    // b ??= 2;
+    // println(b);
+    // Map data = {"name": '123', "age": 1};
+    // data["name"] = 1;
+    // ..操作符
+    // var b = MyName();
+    // var c = b
+    //   ..age = 1
+    //   ..name = '12';
+
+    //使用?.来避免左边对象null带来的异常
+    // var b = MyName();
+    // println(b?.age);
+    //
   }
 
   main();
+}
+
+class MyName {
+  int age = 1;
+  String name = "12";
 }
